@@ -1,0 +1,33 @@
+[core]
+	editor = vim -c \"set fenc=utf-8\"
+	attributefile = ~/.gitattribute
+[diff]
+	tool = vimdiff
+	renames = true
+[difftool]
+	prompt = false
+[merge]
+	tool = vimdiff
+	ff = false
+[mergetool]
+	prompt = false
+[push]
+	default = simple
+[url "https://"]
+	insteadOf = git://
+[pull]
+	ff = only
+[alias]
+	staged-file-diff = diff --cached --no-prefix
+	sd = !"git staged-file-diff"
+	co = checkout
+	cm = commit
+	s = status
+	b = branch
+	a = add
+	r = reset
+	clean-all = clean -df
+	lga = !"git log --graph --pretty=format:'%Cred%h%Creset - %s%C(yellow)%d%Creset %Cgreen(%cr:%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=iso --all"
+	dlog = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)― %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+	olog = log --oneline --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)― %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+	unstage = reset HEAD

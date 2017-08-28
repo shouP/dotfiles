@@ -1,0 +1,45 @@
+# Escape key is C-q, literal is a.
+escape ^Tt
+
+term ansi
+
+# don't remove windows from the window list as soon as window process exits.
+zombie kr # k: destory window, r: resurrect window
+
+term xterm-256color
+
+startup_message off
+mousetrack on
+
+log off
+logfile 'screen/log/screenlog.%H.%Y%m%d-%02c:%s-%n.%t.log'
+#logtstamp on
+#logtstamp string "\n-- SCREEN [%Y/%m/%d %02c:%s] %n:%t --\n"
+
+scrollback 2000
+defscrollback 2000
+
+# リージョン移動マッピング
+bind j focus down
+bind k focus up
+bind l focus right
+bind h focus left
+bind t focus top
+bind b focus bottom
+
+# Yanc/Pasteマッピング
+bind Y copy
+bind P paste .
+
+# 最初にウィンドウを2つ作る
+screen -t main 0
+screen -t sub 1
+
+# 下半分の領域を横分割で作成し、10%の大きさに縮小
+select 0
+split 
+resize 90%
+focus
+select 1
+focus top
+
