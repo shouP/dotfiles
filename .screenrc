@@ -19,6 +19,8 @@ logfile 'screen/log/screenlog.%H.%Y%m%d-%02c:%s-%n.%t.log'
 scrollback 2000
 defscrollback 2000
 
+nethack on
+
 # リージョン移動マッピング
 bind j focus down
 bind k focus up
@@ -36,10 +38,11 @@ screen -t main 0
 screen -t sub 1
 
 # 下半分の領域を横分割で作成し、10%の大きさに縮小
-select 0
-split 
-resize 90%
-focus
-select 1
-focus top
+# select 0
+# split 
+# resize 90%
+# focus
+# select 1
+# focus top
 
+hardstatus alwayslastline '%{= kw}%02c:%s %{= .y}%H %L=%{= .b}%-w%46>%{= .r}%n %t*%{= .b}%+w%-21=%{= .y}[cpu: %l]'
