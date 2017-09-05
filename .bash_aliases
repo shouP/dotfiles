@@ -1,13 +1,14 @@
-alias ls='ls --color=auto'
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+alias c='cd'
 # some more ls aliases
+alias ls='ls --color=auto'
+alias l='ls -alF'
 alias ll='ls -alF'
 alias la='ls -A'
-alias l='ls -CF'
 alias gid='git difftool'
 alias gis='git status --short --branch'
 alias gic='git checkout'
