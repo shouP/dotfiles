@@ -30,8 +30,8 @@ bind t focus top
 bind b focus bottom
 
 # Yanc/Pasteマッピング
-bind Y copy
-bind P paste .
+bind ^Y copy
+bind ^P paste .
 
 # 最初にウィンドウを2つ作る
 screen -t main 0

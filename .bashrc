@@ -103,6 +103,7 @@ export VIM_TEMP
 export GIT_MERGE_AUTOEDIT=no
 
 export LESS='-iRM'
+export SCREENDIR="${HOME}/.screen"
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
