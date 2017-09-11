@@ -16,10 +16,8 @@ logfile 'screen/log/screenlog.%H.%Y%m%d-%02c:%s-%n.%t.log'
 #logtstamp on
 #logtstamp string "\n-- SCREEN [%Y/%m/%d %02c:%s] %n:%t --\n"
 
-scrollback 2000
-defscrollback 2000
-
-nethack on
+scrollback 20000
+defscrollback 20000
 
 # リージョン移動マッピング
 bind j focus down
@@ -34,15 +32,7 @@ bind ^Y copy
 bind ^P paste .
 
 # 最初にウィンドウを2つ作る
-screen -t main 0
-screen -t sub 1
-
-# 下半分の領域を横分割で作成し、10%の大きさに縮小
-# select 0
-# split 
-# resize 90%
-# focus
-# select 1
-# focus top
+screen -t win0 0
+screen -t win1 1
 
 hardstatus alwayslastline '%{= kw}%02c:%s %{= .y}%H %L=%{= .b}%-w%46>%{= .r}%n %t*%{= .b}%+w%-21=%{= .y}[cpu: %l]'
