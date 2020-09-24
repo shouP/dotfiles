@@ -5,3 +5,4 @@ ln -sf $(pwd)/.bashrc ~
 ln -sf $(pwd)/.bash_aliases ~
 ln -sf $(pwd)/.gitconfig ~
 ln -sf $(pwd)/.gitattributes ~
+ln -sf $(pwd)/.inputrc ~
